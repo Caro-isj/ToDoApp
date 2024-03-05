@@ -1,14 +1,12 @@
-import LogoComponent from "./Logo";
+import React from "react";
 
-const Navbar = ({ logoImage, text }) => {
-  console.log("the props we sent");
-
+const Navbar = (props) => {
   return (
-    <>
-      <LogoComponent logoImage={logoImage} text={text} />
-
-      <h1>To Do List</h1>
-    </>
+    <header className="nav-container">
+      <img src={props.image} />
+      <h1> This is our {props.text}</h1>
+    </header>
   );
 };
+
 export default Navbar;
