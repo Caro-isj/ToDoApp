@@ -1,14 +1,19 @@
+import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import React from "react";
 import "./App.css";
 import Logo from "./ourlogo.png";
 import Navbar from "./components/Navbar";
-import HomePage from "./components/HomePage";
+import HomePage from "./pages/HomePage";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import List from "./components/List";
 import ListItem from "./components/ListItem";
 import Tasks from "./assets/data.json";
+import { AboutPage } from "./pages/AboutPage";
+import { DashboardPage } from "./pages/DashboardPage";
+import { ItemDetailsPage } from "./pages/ItemDetailsPage";
+import { NotFoundPage } from "./pages/NotFoundPage";
 
 function App() {
   const [items, setItems] = useState(Tasks);
@@ -27,7 +32,6 @@ function App() {
         <Route path="/itemdetail" element={<ItemDetailsPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/" element={<HomePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <div>
