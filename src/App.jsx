@@ -8,14 +8,10 @@ import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import List from "./components/List";
 import ListItem from "./components/ListItem";
+import Tasks from "./assets/data.json";
 
 function App() {
-  const [items, setitems] = useState([
-    { id: 0, name: "Groceries", isCompleted: true },
-    { id: 1, name: "Homework", isCompleted: true },
-    { id: 2, name: "Cleaning", isCompleted: false },
-    { id: 3, name: "Out for Lunch", isCompleted: false },
-  ]);
+  const [items, setItems] = useState(Tasks);
 
   const handleDeleteitem = (itemId) => {
     setItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
@@ -26,15 +22,20 @@ function App() {
       <div>
         <Navbar image={Logo} text="To-do list" />
       </div>
-
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/itemdetail" element={<ItemDetailsPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
       <div>
-        <HomePage />
         <Sidebar />
       </div>
 
       <div>
-        <ListItem name="" id="" isCompleted />
-        <List />
+        <List items={items} onDelete={handleDeleteitem} />
       </div>
 
       <div>

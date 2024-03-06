@@ -1,5 +1,3 @@
-import React from "react";
-
 const ListItem = ({ item, onDelete }) => {
   const handleDelete = () => {
     onDelete(item.id);
