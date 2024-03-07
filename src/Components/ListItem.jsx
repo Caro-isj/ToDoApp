@@ -5,9 +5,11 @@ const ListItem = ({ item, onDelete }) => {
 
   return (
     <li>
-      {item.name} {item.isCompleted ? "✔️" : "❌"}
+      {item.task} {item.completed === true ? "✔️" : "❌"}
       <button onClick={handleDelete}>Delete</button>
     </li>
   );
 };
 export default ListItem;
+
+//<Link> </Link> link each item to items details page!!

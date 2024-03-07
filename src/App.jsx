@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import { useState } from "react";
 import React from "react";
 import "./App.css";
@@ -14,6 +14,7 @@ import { AboutPage } from "./pages/AboutPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { ItemDetailsPage } from "./pages/ItemDetailsPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
+import { CreateNewItem } from "./components/CreateNewItem";
 
 function App() {
   const [items, setItems] = useState(Tasks);
@@ -26,6 +27,12 @@ function App() {
     <div>
       <div>
         <Navbar image={Logo} text="To-do list" />
+        <Link to="/create-item">
+          <button>Add a new task</button>
+        </Link>
+        <Link to="/update-item">
+          <button>Update a task</button>
+        </Link>
       </div>
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -33,6 +40,8 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="/create-item" element={<CreateNewItem />} />
+        <Route path="/update-item" element={<CreateNewItem />} />
       </Routes>
       <div>
         <Sidebar />
