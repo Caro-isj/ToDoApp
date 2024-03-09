@@ -2,10 +2,12 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
-      <p> Our Repository </p>
-      <a href="https://github.com/Caro-isj/ToDoApp">Click here!</a>
-    </footer>
+    <div>
+      <footer className="footer-container">
+        <a href="https://github.com/Caro-isj/ToDoApp"> Our Repository </a>
+        <p>© 2024 CaroMohd</p>
+      </footer>
+    </div>
   );
 };
 export default Footer;

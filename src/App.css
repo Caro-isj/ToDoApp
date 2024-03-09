@@ -1,50 +1,100 @@
-/*#root {
-  max-width: 1280px;
+#root {
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  background-color: rgb(81, 81, 81);
+  text-align: left;
+  size-adjust: initial;
 }
 
-.logo {
+/*main {
+  margin-top: 120px;
+  margin-left: 240px;
+}*/
+body {
+  padding-top: 110px;
+}
+
+.nav-container {
+  background-color: rgb(49, 58, 114);
+  display: flex;
+  font-size: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 110px;
+  width: 100%;
+}
+
+.nav-container img {
   height: 6em;
   padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
 }
-.logo:hover {
+
+.nav-container img {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-.logo.react:hover {
+.nav-container img {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}*/
-
-.nav-container {
-  background-color: green;
-}
-
 .item-form {
-  background-color: blueviolet;
+  border: 2px solid white;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 1em;
+  background-color: rgb(197, 162, 35);
+}
+
+.item-card {
+  border: 2px solid white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 1em;
+  background-color: rgb(25, 25, 25);
+}
+
+.footer-container {
+  background-color: rgb(49, 58, 114);
+  padding: 2em;
+  text-align: center;
+  font-size: 12px;
+  height: 50px;
+}
+
+.footer-container a {
+  color: beige;
+  border: 2px white solid;
+  padding: 0.5em;
+  border-radius: 2em;
+}
+
+.sidebar-cont {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 140px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 110px; /* Stay at the top */
+  left: 0;
+  background-color: rgb(6, 102, 44);
+  overflow: auto;
+  display: flex;
+}
+
+.sidebar-cont li {
+  border: 2px white solid;
+  border-radius: 2em;
+  padding: 6px 20px;
+  display: block; /* quita los puntos*/
+}
+
+.sidebar-cont a {
+  color: beige;
+}
+
+.about-container {
+  padding-top: 110px;
+  padding-left: 140px;
+}
+
+.about-container p {
+  width: 50%;
 }

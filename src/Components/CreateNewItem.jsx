@@ -42,7 +42,7 @@ export const CreateNewItem = ({ items, setItems }) => {
             }}
           />
         </label>
-        <button type="submit">Create</button>
+        <button type="submit">Done</button>
       </form>
     </div>
   );
