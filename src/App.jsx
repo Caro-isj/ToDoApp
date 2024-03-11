@@ -2,7 +2,7 @@ import { Route, Routes, Link } from "react-router-dom";
 import { useState } from "react";
 import React from "react";
 import "./App.css";
-import Logo from "./Background.png";
+import Logo from "./assets/Background.png";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import Sidebar from "./components/Sidebar";

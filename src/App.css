@@ -95,6 +95,13 @@ body {
   padding-left: 140px;
 }
 
-.about-container p {
+.about-text-container {
   width: 50%;
+  text-align: justify;
+}
+
+.about-photos-container img {
+  border-radius: 100%;
+  margin: 20px;
+  height: 250px;
 }
