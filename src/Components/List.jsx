@@ -1,12 +1,13 @@
-import Tasks from "../assets/data.json";
+import React from "react";
 import ListItem from "./ListItem";
 
-const List = ({ items, onDelete }) => {
+const List = ({ item, onDelete }) => {
   return (
     <div>
-      {items.map((item) => (
+      {/* {items.map((item) => (
         <ListItem key={item.id} item={item} onDelete={onDelete} />
-      ))}
+      ))} */}
+       <ListItem key={item.id} item={item} onDelete={onDelete} />
     </div>
   );
 };

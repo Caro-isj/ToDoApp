@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const CreateNewItem = ({ items, setItems }) => {
   const [task, setTask] = useState("");
@@ -8,15 +8,23 @@ export const CreateNewItem = ({ items, setItems }) => {
 
   const handleCreateItem = (event) => {
     event.preventDefault();
-    const newItem = { task, completed };
-
-    setItems([...items, newItem]);
-
-    nav("/");
+  
+    // Generate a unique ID for the new item
+    const newItem = { id: Date.now(), task, completed };
+  
+    // Update the state with the new item and navigate after the state has been updated
+    setItems([...items,newItem]);
+      
+      // Redirect to the details page of the newly created item
+      // nav(`/itemdetail/${newItem.id}`);
+      
+      // return updatedItems;
+      nav("/");
+   
   };
   return (
     <div>
-      <h2> CreateNewItem</h2>
+      <h2>Create New Item</h2>
       <form className="item-form" onSubmit={handleCreateItem}>
         <label>
           Task:

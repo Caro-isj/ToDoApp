@@ -15,6 +15,15 @@ import { DashboardPage } from "./pages/DashboardPage";
 import { ItemDetailsPage } from "./pages/ItemDetailsPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { CreateNewItem } from "./components/CreateNewItem";
+import { UpdateItem } from "./components/UpdateItem";
+
+
+
+
+
+
+
+
 
 function App() {
   const [items, setItems] = useState(Tasks);
@@ -25,35 +34,22 @@ function App() {
 
   return (
     <div>
-      <div>
-        <Navbar image={Logo} text="To-do list" />
-        <Link to="/create-item">
-          <button>Add a new task</button>
-        </Link>
-        <Link to="/update-item">
-          <button>Update a task</button>
-        </Link>
-      </div>
+      <Navbar image={Logo} text="To-do list" />
+        
+  
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage items={items} setItems={setItems} onDelete={handleDeleteitem}/>} />
         <Route path="/itemdetail" element={<ItemDetailsPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="*" element={<NotFoundPage />} />
-        <Route path="/create-item" element={<CreateNewItem />} />
-        <Route path="/update-item" element={<CreateNewItem />} />
+        <Route path="/create-item" element={<CreateNewItem items={items} setItems={setItems}/>} />
+        <Route path="/update-item" element={<UpdateItem/>} />
       </Routes>
-      <div>
-        <Sidebar />
-      </div>
+    
+    <Sidebar />
+    <Footer />
 
-      <div>
-        <List items={items} onDelete={handleDeleteitem} />
-      </div>
-
-      <div>
-        <Footer />
-      </div>
     </div>
   );
 }

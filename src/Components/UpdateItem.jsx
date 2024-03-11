@@ -1,69 +1,62 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 export const UpdateItem = ({ items, setItems }) => {
   const [task, setTask] = useState("");
-  const [completed, setCompleted] = useState();
-  const nav = useNavigate();
-  const { petId } = useParams();
+  const [completed, setCompleted] = useState(false);
+  const navigate = useNavigate();
+  const { itemId } = useParams();
 
-  useEffect(() => {
-    const foundItem = items.find((oneItem) => {
-      if (oneItem.id == itemId) {
-        return true;
-      }
-    });
-    console.log("here is the found item", foundItem);
-    setTask(foundItem.name);
-    setCompleted(foundItem.owner);
-  }, []);
+  // useEffect(() => {
+  //   const foundItem = items.find((oneItem) => oneItem.id === itemId);
+  //   setTask(foundItem ? foundItem.task : "");
+  //   setCompleted(foundItem ? foundItem.completed : false);
+  // }, [items, itemId]);
 
-  const handleUpdateItem = (event) => {
-    event.preventDefault();
+  // const handleUpdateItem = (event) => {
+  //   event.preventDefault();
 
-    //this maps over all the pets and updates only the one whos id matches the params id from above
-    const mappedItems = items.map((item) => {
-      if (item.id == itemId) {
-        const updatedItem = { task, completed, id: item.id };
-        return updatedItem;
-      } else {
-        return item;
-      }
-    });
-    setItems(mappedItems);
-    nav("/");
-  };
+  //   const mappedItems = items.map((item) => {
+  //     if (item.id === itemId) {
+  //       const updatedItem = { task, completed: !item.completed, id: item.id }; // Toggle the completed field
+  //       return updatedItem;
+  //     } else {
+  //       return item;
+  //     }
+  //   });
+
+  //   setItems(mappedItems);
+  //   navigate("/dashboard");
+  // };
+
   return (
     <div>
-      <h2> Update Item</h2>
-      <Link to="/dashboard">Dashboard </Link>
-      <form className="item-form" onSubmit={handleCreateItem}>
-        <label>
+      <h2>Update Item</h2>
+      {/* <Link to="/dashboard">Dashboard</Link>
+      <form className="item-form" onSubmit={handleUpdateItem}>
+        <label htmlFor="task">
           Task:
           <input
+            id="task"
             name="task"
-            placeholder="task"
+            placeholder="Task"
             type="text"
             value={task}
-            onChange={(event) => {
-              setTask(event.target.value);
-            }}
+            onChange={(event) => setTask(event.target.value)}
           />
         </label>
-        <label>
+        <label htmlFor="completed">
           Completed
           <input
+            id="completed"
             name="completed"
-            placeholder="completed"
-            type="boolean"
-            value={completed}
-            onChange={(event) => {
-              setCompleted(event.target.value);
-            }}
+            type="checkbox"
+            checked={completed}
+            onChange={(event) => setCompleted(event.target.checked)}
           />
         </label>
         <button type="submit">Update</button>
-      </form>
+      </form> */}
     </div>
   );
 };

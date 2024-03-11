@@ -1,6 +1,5 @@
-import { useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-import { CreateNewItem } from "./CreateNewItem";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ListItem = ({ item, onDelete }) => {
   const handleDelete = () => {
@@ -11,24 +10,22 @@ const ListItem = ({ item, onDelete }) => {
 
   return (
     <li className="item-card">
-      {item.task} {item.completed === true ? "✔️" : "❌"}
-      <button onClick={handleDelete}> Delete</button>
-      <button>
+      <Link to={`/itemdetail/${item.id}`}>{item.task}</Link> 
+      {completed ? " ✔️" : " ❌"}
+      <button onClick={handleDelete}>Delete</button>
+      <label>
         Completed
         <input
           name="completed"
-          placeholder="completed"
           type="checkbox"
           checked={completed}
           onChange={(event) => {
             setCompleted(event.target.checked);
           }}
         />
-      </button>
+      </label>
     </li>
   );
 };
-export default ListItem;
 
-//<Link> </Link> link each item to items details page!!
-//check for completed to work with checkmark
+export default ListItem;
