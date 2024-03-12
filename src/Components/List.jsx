@@ -7,7 +7,7 @@ const List = ({ item, onDelete }) => {
       {/* {items.map((item) => (
         <ListItem key={item.id} item={item} onDelete={onDelete} />
       ))} */}
-       <ListItem key={item.id} item={item} onDelete={onDelete} />
+      <ListItem key={item.id} item={item} onDelete={onDelete} />
     </div>
   );
 };

@@ -11,19 +11,10 @@ import List from "./components/List";
 import ListItem from "./components/ListItem";
 import Tasks from "./assets/data.json";
 import { AboutPage } from "./pages/AboutPage";
-import { DashboardPage } from "./pages/DashboardPage";
 import { ItemDetailsPage } from "./pages/ItemDetailsPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { CreateNewItem } from "./components/CreateNewItem";
 import { UpdateItem } from "./components/UpdateItem";
-
-
-
-
-
-
-
-
 
 function App() {
   const [items, setItems] = useState(Tasks);
@@ -34,22 +25,31 @@ function App() {
 
   return (
     <div>
-      <Navbar image={Logo} text="To-do list" />
-        
-  
+      <Navbar image={Logo} text="This is our To-do list" />
+
       <Routes>
-        <Route path="/" element={<HomePage items={items} setItems={setItems} onDelete={handleDeleteitem}/>} />
+        <Route
+          path="/"
+          element={
+            <HomePage
+              items={items}
+              setItems={setItems}
+              onDelete={handleDeleteitem}
+            />
+          }
+        />
         <Route path="/itemdetail" element={<ItemDetailsPage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="*" element={<NotFoundPage />} />
-        <Route path="/create-item" element={<CreateNewItem items={items} setItems={setItems}/>} />
-        <Route path="/update-item" element={<UpdateItem/>} />
+        <Route
+          path="/create-item"
+          element={<CreateNewItem items={items} setItems={setItems} />}
+        />
+        <Route path="/update-item" element={<UpdateItem />} />
       </Routes>
-    
-    <Sidebar />
-    <Footer />
 
+      <Sidebar />
+      <Footer />
     </div>
   );
 }

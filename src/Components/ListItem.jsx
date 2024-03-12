@@ -10,7 +10,7 @@ const ListItem = ({ item, onDelete }) => {
 
   return (
     <li className="item-card">
-      <Link to={`/itemdetail/${item.id}`}>{item.task}</Link> 
+      <Link to={`/itemdetail/${item.id}`}>{item.task}</Link>
       {completed ? " ✔️" : " ❌"}
       <button onClick={handleDelete}>Delete</button>
       <label>

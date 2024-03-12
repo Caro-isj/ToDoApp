@@ -1,26 +1,19 @@
-#root {
-  margin: 0 auto;
+body {
+  padding-top: 95px;
+  padding-left: 140px;
   background-color: rgb(81, 81, 81);
   text-align: left;
   size-adjust: initial;
 }
 
-/*main {
-  margin-top: 120px;
-  margin-left: 240px;
-}*/
-body {
-  padding-top: 110px;
-}
-
 .nav-container {
   background-color: rgb(49, 58, 114);
   display: flex;
-  font-size: 12px;
+  font-size: 10px;
   position: fixed;
   top: 0;
   left: 0;
-  height: 110px;
+  height: 90px;
   width: 100%;
 }
 
@@ -58,6 +51,7 @@ body {
   text-align: center;
   font-size: 12px;
   height: 50px;
+  width: 100%;
 }
 
 .footer-container a {
@@ -72,7 +66,7 @@ body {
   width: 140px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
-  top: 110px; /* Stay at the top */
+  top: 90px; /* Stay at the top */
   left: 0;
   background-color: rgb(6, 102, 44);
   overflow: auto;
@@ -91,8 +85,8 @@ body {
 }
 
 .about-container {
-  padding-top: 110px;
-  padding-left: 140px;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-text-container {

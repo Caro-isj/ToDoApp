@@ -1,6 +1,11 @@
-import React from "react";
+import { useParams, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-export const ItemDetailsPage = ({ item }) => {
+const ItemDetailsPage = ({ item }) => {
+  //const [items, setItems] = useState(Tasks);
+  // const [completed, setCompleted] = useState(false);
+  // const {} = useParams()
+
   return (
     <div>
       <h2>Item Details Page</h2>
@@ -17,3 +22,5 @@ export const ItemDetailsPage = ({ item }) => {
     </div>
   );
 };
+
+export default ItemDetailsPage;
