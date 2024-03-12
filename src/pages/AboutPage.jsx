@@ -1,5 +1,6 @@
 import Mohdphoto from "../assets/mohamed.png";
 import Carophoto from "../assets/caro1.jpg";
+import { Link } from "react-router-dom";
 
 export const AboutPage = () => {
   return (
@@ -17,7 +18,12 @@ export const AboutPage = () => {
       <div className="about-photos-container">
         <img src={Mohdphoto}></img>
         <img src={Carophoto}></img>
+        <div className="network-container">
+          <a href="https://github.com/mohamed1410">Mohamed's GitHub</a>
+          <a href="https://github.com/Caro-isj">Caro's GitHub</a>
+          <a href="https://www.linkedin.com/in/caroisj">LinkedIn</a>
+        </div>
       </div>
     </div>
   );
-  }
+};

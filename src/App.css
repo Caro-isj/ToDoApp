@@ -1,9 +1,15 @@
+@font-face {
+  font-family: "Ananias";
+  src: url("./assets/Ananias.ttf");
+}
+
 body {
   padding-top: 95px;
   padding-left: 140px;
   background-color: rgb(81, 81, 81);
   text-align: left;
   size-adjust: initial;
+  font-family: Ananias;
 }
 
 .nav-container {

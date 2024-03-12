@@ -11,7 +11,7 @@ import List from "./components/List";
 import ListItem from "./components/ListItem";
 import Tasks from "./assets/data.json";
 import { AboutPage } from "./pages/AboutPage";
-import { ItemDetailsPage } from "./pages/ItemDetailsPage";
+import ItemDetailsPage from "./pages/ItemDetailsPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { CreateNewItem } from "./components/CreateNewItem";
 import { UpdateItem } from "./components/UpdateItem";
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div>
-      <Navbar image={Logo} text="This is our To-do list" />
+      <Navbar image={Logo} text="Task Master" />
 
       <Routes>
         <Route
@@ -38,7 +38,10 @@ function App() {
             />
           }
         />
-        <Route path="/itemdetail" element={<ItemDetailsPage />} />
+        <Route
+          path="/itemdetail/:itemId"
+          element={<ItemDetailsPage items={items} setItems={setItems} />}
+        />
         <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route
