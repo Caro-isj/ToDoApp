@@ -1,29 +1,33 @@
 import Mohdphoto from "../assets/mohamed.png";
 import Carophoto from "../assets/caro1.jpg";
 import { Link } from "react-router-dom";
+import GithubLogo from "../assets/github.png";
 
 export const AboutPage = () => {
   return (
     <div className="about-container">
       <div className="about-text-container">
-        <h1>About Us</h1>
+        <h2>About Us</h2>
         <p>
-          Carolina Soto Jurado and Mohamed Abdel Nasser are the 2 best Web
+          Mohamed Abdel Nasser and Carolina Soto Jurado are the two best Web
           Development students Ironhack has ever had. Both immigrants from
           exotic, warm, and spicy lands, you can trust them to put the fun in
-          function!{" "}
+          function!
         </p>
-        <p> Do !dare to miss any of their projects! </p>
+        <p>
+          {" "}
+          Don't miss any of their projects! Check out their GitHub profiles:{" "}
+        </p>
       </div>
       <div className="about-photos-container">
-        <img src={Mohdphoto}></img>
-        <img src={Carophoto}></img>
-        <div className="network-container">
-          <a href="https://github.com/mohamed1410">Mohamed's GitHub</a>
-          <a href="https://github.com/Caro-isj">Caro's GitHub</a>
-          <a href="https://www.linkedin.com/in/caroisj">LinkedIn</a>
-        </div>
+        <Link to="https://github.com/mohamed1410">
+          <img src={Mohdphoto}></img>
+        </Link>
+        <Link to="https://github.com/Caro-isj">
+          <img src={Carophoto}></img>
+        </Link>
       </div>
+      <div className="network-container"></div>
     </div>
   );
 };

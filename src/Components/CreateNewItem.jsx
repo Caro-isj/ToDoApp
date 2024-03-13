@@ -8,22 +8,15 @@ export const CreateNewItem = ({ items, setItems }) => {
 
   const handleCreateItem = (event) => {
     event.preventDefault();
-  
-    // Generate a unique ID for the new item
+
     const newItem = { id: Date.now(), task, completed };
-  
-    // Update the state with the new item and navigate after the state has been updated
-    setItems([...items,newItem]);
-      
-      // Redirect to the details page of the newly created item
-      // nav(`/itemdetail/${newItem.id}`);
-      
-      // return updatedItems;
-      nav("/");
-   
+
+    setItems([...items, newItem]);
+
+    nav("/");
   };
   return (
-    <div>
+    <div className="content-page">
       <h2>Create New Item</h2>
       <form className="item-form" onSubmit={handleCreateItem}>
         <label>

@@ -24,7 +24,7 @@ function App() {
   };
 
   return (
-    <div>
+    <>
       <Navbar image={Logo} text="Task Master" />
 
       <Routes>
@@ -53,7 +53,7 @@ function App() {
 
       <Sidebar />
       <Footer />
-    </div>
+    </>
   );
 }
 

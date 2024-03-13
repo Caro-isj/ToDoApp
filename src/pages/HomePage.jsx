@@ -7,23 +7,23 @@ const HomePage = ({ items, setItems, onDelete }) => {
   }
 
   return (
-    <div>
+    <>
       {items.length === 0 ? (
         <p>No items available.</p>
       ) : (
-        <>
+        <div className="home-content">
           {items.map((item) => (
             <List
-              items={items}
+              allItems={items}
               item={item}
               key={item.id}
               setItems={setItems}
               onDelete={onDelete}
             />
           ))}
-        </>
+        </div>
       )}
-    </div>
+    </>
   );
 };
 

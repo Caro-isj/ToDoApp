@@ -6,16 +6,13 @@ const Sidebar = () => {
     <aside className="sidebar-cont">
       <ul>
         <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
           <Link to="/"> Home </Link>
         </li>
         <li>
           <Link to="/create-item">Add</Link>
         </li>
         <li>
-          <Link to="/update-item">Update</Link>
+          <Link to="/about">About</Link>
         </li>
       </ul>
     </aside>

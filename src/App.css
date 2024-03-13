@@ -4,12 +4,25 @@
 }
 
 body {
-  padding-top: 95px;
+  /*padding-top: 95px;
   padding-left: 140px;
+  padding-bottom: 100px;*/
+  margin-left: 180px;
+  margin-top: 95px;
+  margin-bottom: 100px;
   background-color: rgb(81, 81, 81);
   text-align: left;
   size-adjust: initial;
   font-family: Ananias;
+  position: relative;
+  min-height: 100vh;
+  background-image: url("./assets/flat-lay-work-space-with-notebook-keyboard.jpg");
+  background-repeat: no-repeat;
+  background-size: 1700px;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .nav-container {
@@ -40,7 +53,7 @@ body {
   margin: 20px;
   padding: 10px;
   border-radius: 1em;
-  background-color: rgb(197, 162, 35);
+  background-color: rgb(179, 137, 12);
 }
 
 .item-card {
@@ -49,6 +62,8 @@ body {
   padding: 20px;
   border-radius: 1em;
   background-color: rgb(25, 25, 25);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
 }
 
 .footer-container {
@@ -57,6 +72,10 @@ body {
   text-align: center;
   font-size: 12px;
   height: 50px;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
   width: 100%;
 }
 
@@ -69,7 +88,7 @@ body {
 
 .sidebar-cont {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 140px; /* Set the width of the sidebar */
+  width: 180px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 90px; /* Stay at the top */
@@ -91,17 +110,55 @@ body {
 }
 
 .about-container {
-  display: flex;
+  padding-top: 8%;
+  /*display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;*/
+  margin-left: 200px;
+}
+
+.notFoundCont {
+  margin-left: 200px;
+}
+
+.notFoundCont img {
+  height: 400px;
 }
 
 .about-text-container {
-  width: 50%;
+  width: 60%;
   text-align: justify;
 }
 
 .about-photos-container img {
   border-radius: 100%;
-  margin: 20px;
-  height: 250px;
+  margin: 20px 50px;
+  height: 200px;
+  margin-bottom: 150px;
+}
+
+.about-photos-container img:hover {
+  content: url("./assets/github.png");
+}
+
+.home-content,
+.content-page {
+  padding-top: 5%;
+  padding-bottom: 8%;
+  margin-left: 180px;
+  padding-bottom: 18%;
+  margin-top: 95px;
+}
+
+.content-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-page {
+  text-align: center;
+  padding-left: 20%;
 }

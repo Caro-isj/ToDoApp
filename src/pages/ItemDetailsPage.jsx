@@ -6,7 +6,7 @@ const ItemDetailsPage = ({ items }) => {
   console.log(items);
 
   return (
-    <div>
+    <div className="content-page edit-page">
       <h2>Item Details </h2>
       {taskProfile ? (
         <div>

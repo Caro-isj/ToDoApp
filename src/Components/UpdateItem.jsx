@@ -18,7 +18,7 @@ export const UpdateItem = ({ items, setItems }) => {
 
   //   const mappedItems = items.map((item) => {
   //     if (item.id === itemId) {
-  //       const updatedItem = { task, completed: !item.completed, id: item.id }; // Toggle the completed field
+  //       const updatedItem = { task, completed: !item.completed, id: item.id };
   //       return updatedItem;
   //     } else {
   //       return item;
@@ -26,11 +26,11 @@ export const UpdateItem = ({ items, setItems }) => {
   //   });
 
   //   setItems(mappedItems);
-  //   navigate("/dashboard");
+  //   navigate("/");
   // };
 
   return (
-    <div>
+    <div class="content-page">
       <h2>Update Item</h2>
       {/* <Link to="/dashboard">Dashboard</Link>
       <form className="item-form" onSubmit={handleUpdateItem}>
